@@ -8,25 +8,25 @@
       
       
       
-        <link rel="canonical" href="https://thedatabaseguide.github.io/database/mysql/intro/">
+        <link rel="canonical" href="https://thedatabaseguide.github.io/books/docker-compose/">
       
       
-        <link rel="prev" href="../../intro/">
+        <link rel="prev" href="../tech-books/">
       
       
-        <link rel="next" href="../../postgresql/intro/">
+        <link rel="next" href="../jenkins-guide/">
       
       
-      <link rel="icon" href="../../../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
     
     
       
-        <title>Intro - Database Docs</title>
+        <title>Docker Compose - Database Docs</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.35f28582.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.35f28582.min.css">
       
       
 
@@ -45,7 +45,7 @@
       
     
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -63,6 +63,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#django-with-mysql" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -75,7 +80,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="Database Docs" class="md-header__button md-logo" aria-label="Database Docs" data-md-component="logo">
+    <a href="../.." title="Database Docs" class="md-header__button md-logo" aria-label="Database Docs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -95,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Intro
+              Docker Compose
             
           </span>
         </div>
@@ -162,7 +167,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../blog/" class="md-tabs__link">
+        <a href="../../blog/" class="md-tabs__link">
           
   
   Blog
@@ -176,13 +181,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../intro/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../database/intro/" class="md-tabs__link">
           
   
   Database
@@ -200,7 +203,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../cryptography/intro/" class="md-tabs__link">
+        <a href="../../cryptography/intro/" class="md-tabs__link">
           
   
   Cryptography
@@ -218,7 +221,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../linux/debian/" class="md-tabs__link">
+        <a href="../../linux/debian/" class="md-tabs__link">
           
   
   Linux
@@ -236,7 +239,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../university/intro/" class="md-tabs__link">
+        <a href="../../university/intro/" class="md-tabs__link">
           
   
   University
@@ -250,11 +253,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../../books/tech-books/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../tech-books/" class="md-tabs__link">
           
   
   Books
@@ -293,7 +298,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Database Docs" class="md-nav__button md-logo" aria-label="Database Docs" data-md-component="logo">
+    <a href="../.." title="Database Docs" class="md-nav__button md-logo" aria-label="Database Docs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -351,7 +356,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../blog/" class="md-nav__link">
+      <a href="../../blog/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -412,7 +417,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../blog/archive/2024/" class="md-nav__link">
+      <a href="../../blog/archive/2024/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -445,28 +450,23 @@
       
   
   
-    
   
   
-  
     
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -477,7 +477,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Database
@@ -491,7 +491,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../intro/" class="md-nav__link">
+      <a href="../../database/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -509,8 +509,6 @@
                 
   
   
-    
-  
   
   
     
@@ -520,11 +518,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
         
           
           <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
@@ -538,7 +536,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
             MySql
@@ -549,17 +547,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../database/mysql/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -568,7 +559,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -627,7 +617,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../postgresql/intro/" class="md-nav__link">
+      <a href="../../database/postgresql/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -694,7 +684,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mongodb/intro/" class="md-nav__link">
+      <a href="../../database/mongodb/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -761,7 +751,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../firebase/intro/" class="md-nav__link">
+      <a href="../../database/firebase/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -835,7 +825,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../cryptography/intro/" class="md-nav__link">
+      <a href="../../cryptography/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -856,7 +846,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../cryptography/steganography/" class="md-nav__link">
+      <a href="../../cryptography/steganography/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -922,7 +912,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../linux/debian/" class="md-nav__link">
+      <a href="../../linux/debian/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -988,7 +978,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../university/intro/" class="md-nav__link">
+      <a href="../../university/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1013,23 +1003,28 @@
       
   
   
+    
   
   
+  
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -1040,7 +1035,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Books
@@ -1054,7 +1049,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../books/tech-books/" class="md-nav__link">
+      <a href="../tech-books/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1072,10 +1067,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../books/docker-compose/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Docker Compose
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1084,6 +1097,33 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#django-with-mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      Django with MySql
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1096,7 +1136,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../books/jenkins-guide/" class="md-nav__link">
+      <a href="../jenkins-guide/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1117,7 +1157,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../books/pocket-devops/" class="md-nav__link">
+      <a href="../pocket-devops/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1156,6 +1196,23 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#django-with-mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      Django with MySql
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1169,9 +1226,63 @@
                   
 
 
-  <h1>Intro</h1>
+  <h1>Docker Compose</h1>
 
-<p>mysql</p>
+<h2 id="django-with-mysql"><code>Django</code> with <code>MySql</code></h2>
+<p>If you choose <code>Docker Compose</code> to deploy your Django web application along with a MySQL database, you would typically follow these steps:</p>
+<ul>
+<li><code>Dockerfile</code> for Django App:</li>
+</ul>
+<p>Here's a basic example of what a Dockerfile for a Django application might look like:</p>
+<p>```
+  FROM python:3.9</p>
+<p>WORKDIR /app</p>
+<p>COPY requirements.txt /app/
+  RUN pip install --no-cache-dir -r requirements.txt</p>
+<p>COPY . /app/</p>
+<p>CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+  ```</p>
+<ul>
+<li><code>docker-compose.yml</code>:</li>
+</ul>
+<p>Below is an example <code>docker-compose.yml</code> file for a Django app with a MySQL database:</p>
+<p>```
+    version: '3'</p>
+<pre><code>services:
+db:
+    image: mysql:5.7
+    restart: always
+    environment:
+    MYSQL_DATABASE: 'mydatabase'
+    MYSQL_USER: 'myuser'
+    MYSQL_PASSWORD: 'mypassword'
+    MYSQL_ROOT_PASSWORD: 'rootpassword'
+    ports:
+    - '3306:3306'
+
+web:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+    - .:/app
+    ports:
+    - '8000:8000'
+    depends_on:
+    - db
+</code></pre>
+<p>```</p>
+<ul>
+<li>Django <code>Settings</code>:</li>
+</ul>
+<p>Make sure your Django application's settings are configured to use the MySQL database. You'll need to update the <code>DATABASES</code> setting in your Django <code>settings.py</code> file to point to the MySQL database container</p>
+<ul>
+<li>Run <code>Docker Compose</code>:</li>
+</ul>
+<p>Run docker-compose up in the directory containing your docker-compose.yml file. This command will start the containers defined in the docker-compose.yml file. Docker Compose will build the Docker images (if necessary) and start the containers for your Django app and MySQL database.</p>
+<ul>
+<li><code>Access</code> Your Application:</li>
+</ul>
+<p>Once Docker Compose has started the containers, you should be able to access your Django application by navigating to <code>http://localhost:8000</code> in your web browser.</p>
 
 
 
@@ -1207,7 +1318,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../../intro/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Intro">
+          <a href="../tech-books/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Tech Books">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1217,20 +1328,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Intro
+                Tech Books
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../postgresql/intro/" class="md-footer__link md-footer__link--next" aria-label="Next: Intro">
+          <a href="../jenkins-guide/" class="md-footer__link md-footer__link--next" aria-label="Next: Jenkins Guide">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Intro
+                Jenkins Guide
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -1264,10 +1375,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["search.suggest", "search.highlight", "navigation.tabs", "navigation.top", "navigation.tabs.sticky", "header.autohide", "navigation.footer", "content.code.copy", "content.code.select"], "search": "../../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["search.suggest", "search.highlight", "navigation.tabs", "navigation.top", "navigation.tabs.sticky", "header.autohide", "navigation.footer", "content.code.copy", "content.code.select"], "search": "../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.56dfad97.min.js"></script>
+      <script src="../../assets/javascripts/bundle.56dfad97.min.js"></script>
       
     
   </body>
