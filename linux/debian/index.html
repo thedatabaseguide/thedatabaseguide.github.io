@@ -11,22 +11,25 @@
         <link rel="canonical" href="https://thedatabaseguide.github.io/linux/debian/">
       
       
-        <link rel="prev" href="../../cryptography/steganography/">
+        <link rel="prev" href="../kernel/">
       
       
-        <link rel="next" href="../../university/intro/">
+        <link rel="next" href="../core/file-system-hierarchy/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.2">
     
     
       
-        <title>Intro - Database Docs</title>
+        <title>Debian - Database Docs</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.35f28582.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -45,17 +48,35 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
-    <body dir="ltr">
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -83,12 +104,12 @@
     <a href="../.." title="Database Docs" class="md-header__button md-logo" aria-label="Database Docs" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -100,21 +121,47 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Intro
+              Debian
             
           </span>
         </div>
       </div>
     </div>
     
+      
+        <form class="md-header__option" data-md-component="palette">
+  
     
-      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
       <label class="md-header__button md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
       </label>
       <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
@@ -123,15 +170,15 @@
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
         <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
       
@@ -139,7 +186,7 @@
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+      <div class="md-search__scrollwrap" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -223,7 +270,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+        <a href="../intro/" class="md-tabs__link">
           
   
   Linux
@@ -301,7 +348,7 @@
     <a href="../.." title="Database Docs" class="md-nav__button md-logo" aria-label="Database Docs" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
 
     </a>
     Database Docs
@@ -318,18 +365,20 @@
     
     
     
+    
+    
       
       
     
-    
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
+        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
         
           
-          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -379,12 +428,11 @@
     
     
     
-      
-      
     
     
     <li class="md-nav__item md-nav__item--nested">
       
+        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" >
@@ -455,18 +503,20 @@
     
     
     
+    
+    
       
       
     
-    
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
+        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -514,12 +564,11 @@
     
     
     
-      
-      
     
     
     <li class="md-nav__item md-nav__item--nested">
       
+        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
@@ -581,12 +630,11 @@
     
     
     
-      
-      
     
     
     <li class="md-nav__item md-nav__item--nested">
       
+        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
@@ -648,12 +696,11 @@
     
     
     
-      
-      
     
     
     <li class="md-nav__item md-nav__item--nested">
       
+        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
@@ -715,12 +762,11 @@
     
     
     
-      
-      
     
     
     <li class="md-nav__item md-nav__item--nested">
       
+        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
@@ -789,18 +835,20 @@
     
     
     
+    
+    
       
       
     
-    
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
+        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -878,15 +926,14 @@
     
     
     
-      
-        
-        
-      
-      
     
+    
+      
+      
     
     <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
+        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
@@ -914,6 +961,69 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intro
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../distros/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Distros
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kernel/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kernel
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -928,7 +1038,7 @@
           
   
   <span class="md-ellipsis">
-    Intro
+    Debian
   </span>
   
 
@@ -939,7 +1049,7 @@
         
   
   <span class="md-ellipsis">
-    Intro
+    Debian
   </span>
   
 
@@ -968,43 +1078,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#display-the-operating-system-kernel-thats-running" class="md-nav__link">
-    <span class="md-ellipsis">
-      display the operating system kernel that’s running:
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#display-the-kernel-version-number-the-release" class="md-nav__link">
-    <span class="md-ellipsis">
-      display the kernel version number (the “release”):
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#display-the-machine-hardware-name" class="md-nav__link">
-    <span class="md-ellipsis">
-      display the machine hardware name:
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#display-all-available-information" class="md-nav__link">
-    <span class="md-ellipsis">
-      display all available information:
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="display all available information:">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#white-belt" class="md-nav__link">
     <span class="md-ellipsis">
       White belt
@@ -1012,23 +1085,8 @@
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
       
         <li class="md-nav__item">
-  <a href="#pwd-or-print-working-directory" class="md-nav__link">
-    <span class="md-ellipsis">
-      pwd or Print Working Directory
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="pwd or Print Working Directory">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#black-belt" class="md-nav__link">
     <span class="md-ellipsis">
       Black Belt
@@ -1036,23 +1094,8 @@
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
       
         <li class="md-nav__item">
-  <a href="#install" class="md-nav__link">
-    <span class="md-ellipsis">
-      install
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="install">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#cat-commands" class="md-nav__link">
     <span class="md-ellipsis">
       Cat Commands
@@ -1060,8 +1103,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#types-of-packages" class="md-nav__link">
     <span class="md-ellipsis">
       Types of Packages
@@ -1069,8 +1112,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#package-manager" class="md-nav__link">
     <span class="md-ellipsis">
       Package Manager
@@ -1078,77 +1121,17 @@
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
       
         <li class="md-nav__item">
-  <a href="#install_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      install
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#remove" class="md-nav__link">
-    <span class="md-ellipsis">
-      remove
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#list" class="md-nav__link">
-    <span class="md-ellipsis">
-      list
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#syntax" class="md-nav__link">
-    <span class="md-ellipsis">
-      syntax
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#keeping-software-up-to-date" class="md-nav__link">
-    <span class="md-ellipsis">
-      Keeping Software Up to Date
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#basic-snap-commands" class="md-nav__link">
-    <span class="md-ellipsis">
-      Basic Snap Commands
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Basic Snap Commands">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#tar-tape-archive" class="md-nav__link">
     <span class="md-ellipsis">
-      Tar (==Tape Archive==)
+      Tar (Tape Archive)
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#file-permissions-and-ownership" class="md-nav__link">
     <span class="md-ellipsis">
       File Permissions and Ownership
@@ -1156,8 +1139,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#groups-and-id" class="md-nav__link">
     <span class="md-ellipsis">
       Groups and id
@@ -1180,41 +1163,8 @@
     </nav>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
       
         <li class="md-nav__item">
-  <a href="#to-check-if-the-docker-group-already-exists-on-your-system" class="md-nav__link">
-    <span class="md-ellipsis">
-      To check if the "docker" group already exists on your system,
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#if-the-group-doesnt-exist-this-command-will-not-produce-any-output" class="md-nav__link">
-    <span class="md-ellipsis">
-      If the group doesn't exist, this command will not produce any output.
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#this-command-will-display-all-the-groups-that-the-user-bishow-is-a-member-of" class="md-nav__link">
-    <span class="md-ellipsis">
-      This command will display all the groups that the user "bishow" is a member of.
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="This command will display all the groups that the user "bishow" is a member of.">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#symlink-linux" class="md-nav__link">
     <span class="md-ellipsis">
       Symlink Linux
@@ -1222,8 +1172,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#reference" class="md-nav__link">
     <span class="md-ellipsis">
       Reference
@@ -1231,15 +1181,97 @@
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
       
     </ul>
   
 </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    CORE
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            CORE
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../core/file-system-hierarchy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linux File System
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../core/permission-model/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Permission Model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -1262,18 +1294,20 @@
     
     
     
+    
+    
       
       
     
-    
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
+        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -1328,18 +1362,20 @@
     
     
     
+    
+    
       
       
     
-    
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
+        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
         
           
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -1482,43 +1518,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#display-the-operating-system-kernel-thats-running" class="md-nav__link">
-    <span class="md-ellipsis">
-      display the operating system kernel that’s running:
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#display-the-kernel-version-number-the-release" class="md-nav__link">
-    <span class="md-ellipsis">
-      display the kernel version number (the “release”):
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#display-the-machine-hardware-name" class="md-nav__link">
-    <span class="md-ellipsis">
-      display the machine hardware name:
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#display-all-available-information" class="md-nav__link">
-    <span class="md-ellipsis">
-      display all available information:
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="display all available information:">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#white-belt" class="md-nav__link">
     <span class="md-ellipsis">
       White belt
@@ -1526,23 +1525,8 @@
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
       
         <li class="md-nav__item">
-  <a href="#pwd-or-print-working-directory" class="md-nav__link">
-    <span class="md-ellipsis">
-      pwd or Print Working Directory
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="pwd or Print Working Directory">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#black-belt" class="md-nav__link">
     <span class="md-ellipsis">
       Black Belt
@@ -1550,23 +1534,8 @@
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
       
         <li class="md-nav__item">
-  <a href="#install" class="md-nav__link">
-    <span class="md-ellipsis">
-      install
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="install">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#cat-commands" class="md-nav__link">
     <span class="md-ellipsis">
       Cat Commands
@@ -1574,8 +1543,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#types-of-packages" class="md-nav__link">
     <span class="md-ellipsis">
       Types of Packages
@@ -1583,8 +1552,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#package-manager" class="md-nav__link">
     <span class="md-ellipsis">
       Package Manager
@@ -1592,77 +1561,17 @@
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
       
         <li class="md-nav__item">
-  <a href="#install_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      install
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#remove" class="md-nav__link">
-    <span class="md-ellipsis">
-      remove
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#list" class="md-nav__link">
-    <span class="md-ellipsis">
-      list
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#syntax" class="md-nav__link">
-    <span class="md-ellipsis">
-      syntax
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#keeping-software-up-to-date" class="md-nav__link">
-    <span class="md-ellipsis">
-      Keeping Software Up to Date
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#basic-snap-commands" class="md-nav__link">
-    <span class="md-ellipsis">
-      Basic Snap Commands
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Basic Snap Commands">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#tar-tape-archive" class="md-nav__link">
     <span class="md-ellipsis">
-      Tar (==Tape Archive==)
+      Tar (Tape Archive)
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#file-permissions-and-ownership" class="md-nav__link">
     <span class="md-ellipsis">
       File Permissions and Ownership
@@ -1670,8 +1579,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#groups-and-id" class="md-nav__link">
     <span class="md-ellipsis">
       Groups and id
@@ -1694,41 +1603,8 @@
     </nav>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
       
         <li class="md-nav__item">
-  <a href="#to-check-if-the-docker-group-already-exists-on-your-system" class="md-nav__link">
-    <span class="md-ellipsis">
-      To check if the "docker" group already exists on your system,
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#if-the-group-doesnt-exist-this-command-will-not-produce-any-output" class="md-nav__link">
-    <span class="md-ellipsis">
-      If the group doesn't exist, this command will not produce any output.
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#this-command-will-display-all-the-groups-that-the-user-bishow-is-a-member-of" class="md-nav__link">
-    <span class="md-ellipsis">
-      This command will display all the groups that the user "bishow" is a member of.
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="This command will display all the groups that the user "bishow" is a member of.">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#symlink-linux" class="md-nav__link">
     <span class="md-ellipsis">
       Symlink Linux
@@ -1736,18 +1612,13 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#reference" class="md-nav__link">
     <span class="md-ellipsis">
       Reference
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1766,162 +1637,165 @@
                   
 
 
-<p>What is a daemon?</p>
+  <h1>Debian</h1>
+
+<div><p>What is a daemon?</p>
 <p>A daemon (pronounced <code>DAY-MAN</code>, <code>DAY-MON</code> or sometimes <code>DEE-MON</code>) is a background process that runs on the Linux OS continuously. When we say background, we mean that the program runs without any user interaction. It runs “behind the scenes“ so to speak.</p>
 <h2 id="basic">Basic</h2>
 <ul>
 <li>
 <p>To see which <code>kernel version</code> is running on your system:</p>
-<p>==The command “<code>uname</code>” stands for “Unix name” and tells you about the operating system kernel that’s running.==</p>
-<p>```bash</p>
-<h1 id="display-the-operating-system-kernel-thats-running">display the operating system kernel that’s running:</h1>
-<p>$ uname</p>
-<h1 id="display-the-kernel-version-number-the-release">display the kernel version number (the “release”):</h1>
-<p>$ uname -r</p>
-<h1 id="display-the-machine-hardware-name">display the machine hardware name:</h1>
-<p>$ uname -m</p>
-<h1 id="display-all-available-information">display all available information:</h1>
-<p>$ uname -a
-```</p>
+<p><mark>The command “<code>uname</code>” stands for “Unix name” and tells you about the operating system kernel that’s running.</mark></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># display the operating system kernel that’s running:</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>$<span class="w"> </span>uname
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># display the kernel version number (the “release”):</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>$<span class="w"> </span>uname<span class="w"> </span>-r
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="c1"># display the machine hardware name:</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>$<span class="w"> </span>uname<span class="w"> </span>-m
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="c1"># display all available information:</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>$<span class="w"> </span>uname<span class="w"> </span>-a
+</span></code></pre></div>
 </li>
 <li>
 <p>To Open New Terminal in Ubuntu:</p>
-<p>++ctrl+alt+t++</p>
+<p><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-t">T</kbd></span></p>
 </li>
 </ul>
 <h2 id="white-belt">White belt</h2>
 <ul>
 <li>
 <p>To see the hostname:</p>
-<p>```bash
-$ hostname</p>
-<h1 id="pwd-or-print-working-directory">pwd or Print Working Directory</h1>
-<p>$ pwd
-```</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>$<span class="w"> </span>hostname
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="c1"># pwd or Print Working Directory</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>$<span class="w"> </span><span class="nb">pwd</span>
+</span></code></pre></div>
 </li>
 <li>
 <p>To see your assigned <code>user id</code> and <code>group id</code>, simply issue the <code>id</code> command:</p>
-<p><code>bash
-$ id</code></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>$<span class="w"> </span>id
+</span></code></pre></div>
 </li>
 </ul>
 <h2 id="black-belt">Black Belt</h2>
 <ul>
 <li>
 <p><code>Tmux</code>: Secret Background Windows</p>
-<p><code>tmux</code> or <code>Terminal Multiplexer</code> is a piece of software used to manage terminal sessions. In addition, it can spin up long-standing terminals in the background of the Linux operating system that can be saved and recalled later.</p>
-<p>Tmux cancaome in handy for when you are doing work on a Linux system remotely via ==SSH== and need to keep a session open and to come back to later.</p>
-<p>```bash title="bash"</p>
-<h1 id="install">install</h1>
-<p>$ apt-get install tmux
-```</p>
+<p><code>tmux</code> or <code>Terminal Multiplexer</code> is a piece of software used to manage terminal sessions. In addition, it can spin up long-standing terminals in the    background of the Linux operating system that can be saved and recalled later.</p>
+<p>Tmux cancaome in handy for when you are doing work on a Linux system remotely via <mark>SSH</mark> and need to keep a session open and to come back to later.</p>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># install</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>$<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>tmux
+</span></code></pre></div>
 </li>
 </ul>
-<hr />
+<hr>
 <h2 id="cat-commands">Cat Commands</h2>
-<p>Cat means <code>concatenate</code> frequently used command in Linux. It can read data from the file and gives the content as output. It can help us to <code>create</code>, <code>view</code> and <code>concatenate</code> files. </p>
+<p>Cat means <code>concatenate</code> frequently used command in Linux. It can read data from the file and gives the content as output. It can help us to <code>create</code>, <code>view</code> and <code>concatenate</code> files.</p>
 <p>So let us see frequently used <code>cat</code> commands.</p>
-<pre><code class="language-bash"># TO VIEW A SINGLE FILE:
-$ cat filename
-
-# TO VIEW MULTIPLE FILES
-$ cat filename1 filename2
-
-# TO VIEW THE CONTENTS OF A FILE PRECEDING WITH LINE NUMBERS:
-$ cat -n filename
-
-# TO CREATE A FILE
-$ cat &gt; new_file
-</code></pre>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># TO VIEW A SINGLE FILE:</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>$<span class="w"> </span>cat<span class="w"> </span>filename
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="c1"># TO VIEW MULTIPLE FILES</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>$<span class="w"> </span>cat<span class="w"> </span>filename1<span class="w"> </span>filename2
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="c1"># TO VIEW THE CONTENTS OF A FILE PRECEDING WITH LINE NUMBERS:</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>$<span class="w"> </span>cat<span class="w"> </span>-n<span class="w"> </span>filename
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="c1"># TO CREATE A FILE</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>$<span class="w"> </span>cat<span class="w"> </span>&gt;<span class="w"> </span>new_file
+</span></code></pre></div>
 <p>Ubuntu Important Commands</p>
-<pre><code class="language-bash"># It gives information about how long the system has been running in one line.
-$ uptime
-
-# It displays detailed information about the users who are logged in the system currently.
-$ w
-
-# Using DNS Tools
-# 1. It display information about the domain name, IP address &amp; DNS server
-$ nslookup www.google.com
-
-# 2. It display information about the domain name &amp; IP Addresss
-$ host www.google.com
-
-# 3. dig is a more advanced DNS tool
-$ dig www.google.com
-</code></pre>
-<hr />
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># It gives information about how long the system has been running in one line.</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>$<span class="w"> </span>uptime
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="c1"># It displays detailed information about the users who are logged in the system currently.</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>$<span class="w"> </span>w
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="c1"># Using DNS Tools</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="c1"># 1. It display information about the domain name, IP address &amp; DNS server</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>$<span class="w"> </span>nslookup<span class="w"> </span>www.google.com
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="c1"># 2. It display information about the domain name &amp; IP Addresss</span>
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>$<span class="w"> </span>host<span class="w"> </span>www.google.com
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>
+</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="c1"># 3. dig is a more advanced DNS tool</span>
+</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>$<span class="w"> </span>dig<span class="w"> </span>www.google.com
+</span></code></pre></div>
+<hr>
 <h2 id="types-of-packages">Types of Packages</h2>
 <p>The two most popular packages</p>
 <ol>
 <li>
 <p>Debian (<code>.deb</code>) packages:</p>
-<p>Debian packages are used for distributions like Debian, Ubuntu, and Linux Mint. </p>
+<p>Debian packages are used for distributions like Debian, Ubuntu, and Linux Mint.</p>
 </li>
 <li>
 <p>Red Hat (<code>.rpm</code>):</p>
 <p>Red Hat packages are used in Fedora, CentOS, RHEL, Suse, and others.</p>
 </li>
 </ol>
-<hr />
+<hr>
 <h2 id="package-manager">Package Manager</h2>
 <ol>
 <li>
 <p>Debian package tool (<strong>dpkg</strong>): DPKG - The True Hero</p>
-<p><code>Dpkg</code> is a tool that APT is using behind the scenes to install packages. <code>Dpkg</code> ==doesn’t install dependencies==. If we have a <code>.deb</code> package on our system, we can install it easily with dpkg:</p>
-<p>```bash</p>
-<h1 id="install_1">install</h1>
-<p>$ dpkg -i my_package_to_be_installed.deb</p>
-<h1 id="remove">remove</h1>
-<p>$ dpkg -r my_package_to_be_removed.deb</p>
-<h1 id="list">list</h1>
-<p>$ dpkg -l
-```</p>
+<p><code>Dpkg</code> is a tool that APT is using behind the scenes to install packages. <code>Dpkg</code> <mark>doesn’t install dependencies</mark>. If we have a <code>.deb</code> package on our system, we can install it easily with dpkg:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># install</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>$<span class="w"> </span>dpkg<span class="w"> </span>-i<span class="w"> </span>my_package_to_be_installed.deb
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="c1"># remove</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>$<span class="w"> </span>dpkg<span class="w"> </span>-r<span class="w"> </span>my_package_to_be_removed.deb
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="c1"># list</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>$<span class="w"> </span>dpkg<span class="w"> </span>-l
+</span></code></pre></div>
 </li>
 <li>
 <p><strong>apt-get</strong></p>
-<p>```bash</p>
-<h1 id="syntax">syntax</h1>
-<p>$ apt-get install <package-name></p>
-<p>$ apt-get install nmap
-```</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1"># syntax</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>$<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>&lt;package-name&gt;
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>$<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>nmap
+</span></code></pre></div>
 </li>
 <li>
 <p>Advanced Package Tool (<strong>apt</strong>)</p>
 <p><code>apt</code> was introduced to be a bit more user-friendly than <code>apt-get</code>.
 APT builds on dpkg and adds some special features like managing dependencies, upgrades and searching for package</p>
-<p>```bash</p>
-<h1 id="keeping-software-up-to-date">Keeping Software Up to Date</h1>
-<p>$ sudo apt update
-```</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1"># Keeping Software Up to Date</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>$<span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>update
+</span></code></pre></div>
 </li>
 <li>
 <p>Snap (<strong>.snap</strong>)</p>
-<p>Snap, a <code>package management system</code> developed by ==Canonical, Ltd==. Unlike <code>apt</code>
-packages, <code>snap</code> bundles all of the dependencies for a package into a single <code>.snap</code> file.  </p>
+<p>Snap, a <code>package management system</code> developed by <mark>Canonical, Ltd</mark>. Unlike <code>apt</code>
+packages, <code>snap</code> bundles all of the dependencies for a package into a single <code>.snap</code> file.</p>
 <p>This ensures that the software package is self-contained with its own copy of all of the libraries and assets needed to run. This avoids the potential conflicts of packages relying on different versions of the same shared assets and libraries. The Snap system also allows different versions of the same packages to be installed in parallel.</p>
-<p>```bash</p>
-<h1 id="basic-snap-commands">Basic Snap Commands</h1>
-<p>$ snap list
-$ snap install remmina
-$ snap remove remmina
-$ snap find vlc
-$ snap info remmina
-```</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1"># Basic Snap Commands</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>$<span class="w"> </span>snap<span class="w"> </span>list
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>$<span class="w"> </span>snap<span class="w"> </span>install<span class="w"> </span>remmina
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>$<span class="w"> </span>snap<span class="w"> </span>remove<span class="w"> </span>remmina
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>$<span class="w"> </span>snap<span class="w"> </span>find<span class="w"> </span>vlc
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>$<span class="w"> </span>snap<span class="w"> </span>info<span class="w"> </span>remmina
+</span></code></pre></div>
 </li>
 </ol>
-<hr />
-<h2 id="tar-tape-archive">Tar (==Tape Archive==)</h2>
+<hr>
+<h2 id="tar-tape-archive">Tar (<mark>Tape Archive</mark>)</h2>
 <p>Tar is a powerful archiving utility used to compress and backup files in the Linux operating system. It is popular tool for creating <code>archives</code> of files and directories.</p>
-<pre><code class="language-bash"># To create a tar archive
-$ tar -cvf archive.tar directory/
-
-# To view the contents of a tar archive
-$ tar -tvf archive.tar
-
-# To extract the contents of a tar archive
-$ tar -xvf archive.tar
-</code></pre>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c1"># To create a tar archive</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>$<span class="w"> </span>tar<span class="w"> </span>-cvf<span class="w"> </span>archive.tar<span class="w"> </span>directory/
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="c1"># To view the contents of a tar archive</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>$<span class="w"> </span>tar<span class="w"> </span>-tvf<span class="w"> </span>archive.tar
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="c1"># To extract the contents of a tar archive</span>
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>$<span class="w"> </span>tar<span class="w"> </span>-xvf<span class="w"> </span>archive.tar
+</span></code></pre></div>
 <ul>
 <li>‘<code>c</code>’ flag stands for <code>create</code></li>
 <li>‘<code>x</code>’ flag stands for <code>extract</code></li>
@@ -1929,84 +1803,77 @@ $ tar -xvf archive.tar
 <li>‘<code>v</code>’ stands for <code>verbose</code></li>
 <li>‘<code>f</code>’ stands for <code>file</code></li>
 </ul>
-<hr />
+<hr>
 <h2 id="file-permissions-and-ownership">File Permissions and Ownership</h2>
 <p>In Linux, every file and directory has an owner and a set of permissions that determine who can access and modify the file.</p>
 <p><strong>File Permissions</strong></p>
 <p>Each file on a Linux system has <code>three</code> types of permissions:</p>
 <ul>
-<li>read <code>r</code>, </li>
-<li>write <code>w</code>, </li>
+<li>read <code>r</code>,</li>
+<li>write <code>w</code>,</li>
 <li>execute <code>x</code></li>
 </ul>
-<p>```bash title="bash"
-$ ls -l <file-or-folder></p>
-<pre><code>
-**Changing File Permissions**
-
-The `chmod` command is used to change the permissions for a file. 
-
-```bash title=&quot;bash&quot;
-$ chmod mode &lt;file-or-folder&gt;
-</code></pre>
-<p>There are two ways to specify the mode: </p>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>$<span class="w"> </span>ls<span class="w"> </span>-l<span class="w"> </span>&lt;file-or-folder&gt;
+</span></code></pre></div>
+<p><strong>Changing File Permissions</strong></p>
+<p>The <code>chmod</code> command is used to change the permissions for a file.</p>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>$<span class="w"> </span>chmod<span class="w"> </span>mode<span class="w"> </span>&lt;file-or-folder&gt;
+</span></code></pre></div>
+<p>There are two ways to specify the mode:</p>
 <ul>
-<li>using a <code>numeric value</code>, or </li>
+<li>using a <code>numeric value</code>, or</li>
 <li>using <code>symbolic values</code>.</li>
 </ul>
-<hr />
+<hr>
 <h2 id="groups-and-id">Groups and id</h2>
 <ol>
 <li>
 <p>Creating a Group:</p>
 <p>To create a group, you can use the <code>groupadd</code> command followed by the name of the group you want to create. For example:</p>
-<p><code>bash title="bash"
-$ sudo groupadd developers</code></p>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>$<span class="w"> </span>sudo<span class="w"> </span>groupadd<span class="w"> </span>developers
+</span></code></pre></div>
 <p>This creates a new group called <code>developers</code>.</p>
 </li>
 <li>
 <p>Adding <code>Users</code> to a <code>Group</code>:</p>
 <p>To add users to a group, you can use the <code>usermod</code> command with the <code>-aG</code> option followed by the group name and username. For example:</p>
 <ul>
-<li>
-<p><code>-a</code>, <code>--append</code>: </p>
-<p>This option tells <code>usermod</code> to append the user to the supplementary group(s). In other words, it adds the user to the specified group(s) without removing the user from any other groups.</p>
-</li>
-<li>
-<p><code>-G</code>, <code>--groups</code>:</p>
-<p>This option specifies a list of supplementary groups which the user should become a member of. This option sets the list of supplementary groups directly, without appending to the current list of supplementary groups.</p>
-</li>
+<li><code>-a</code>, <code>--append</code>:</li>
 </ul>
+<p>This option tells <code>usermod</code> to append the user to the supplementary group(s). In other words, it adds the user to the specified group(s) without removing the user from any other groups.</p>
+<ul>
+<li><code>-G</code>, <code>--groups</code>:</li>
+</ul>
+<p>This option specifies a list of supplementary groups which the user should become a member of. This option sets the list of supplementary groups directly, without appending to the current list of supplementary groups.</p>
 <p>So, when you use <code>-aG</code> together with usermod, it means you are appending the user to the specified group(s) without removing the user from any other groups, and you're specifying a list of supplementary groups which the user should become a member of.</p>
-<p><code>bash title="bash"
-$ sudo usermod -aG developers alice</code></p>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>$<span class="w"> </span>sudo<span class="w"> </span>usermod<span class="w"> </span>-aG<span class="w"> </span>developers<span class="w"> </span>alice
+</span></code></pre></div>
 <p>This adds the <strong>user</strong> <code>alice</code> to the <code>developers</code> <strong>group</strong>.</p>
 </li>
 <li>
 <p>Checking Group Membership:</p>
 <p>To see which <code>groups</code> a <code>user</code> belongs to, you can use the <code>id</code> command followed by the username. For example:</p>
-<p><code>bash title="bash"
-$ id alice</code></p>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>$<span class="w"> </span>id<span class="w"> </span>alice
+</span></code></pre></div>
 </li>
 </ol>
 <h3 id="to-list-all-groups">To List all groups</h3>
 <p>To list all the groups in Linux, you can use the <code>getent</code> command followed by the <code>group</code> argument:</p>
-<p>```bash title="bash"
-$ getent group</p>
-<h1 id="to-check-if-the-docker-group-already-exists-on-your-system">To check if the "docker" group already exists on your system,</h1>
-<h1 id="if-the-group-doesnt-exist-this-command-will-not-produce-any-output">If the group doesn't exist, this command will not produce any output.</h1>
-<p>$ getent group docker</p>
-<h1 id="this-command-will-display-all-the-groups-that-the-user-bishow-is-a-member-of">This command will display all the groups that the user "bishow" is a member of.</h1>
-<p>$ groups bishow</p>
-<pre><code>
-Alternatively, you can also view the contents of the `/etc/group` file, which stores group information. You can use any text editor or commands like `cat` or `less` to view its contents:
-
-```bash title=&quot;bash&quot;
-$ cat /etc/group
-
-#
-$ grep docker /etc/group
-</code></pre>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>$<span class="w"> </span>getent<span class="w"> </span>group
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="c1"># To check if the "docker" group already exists on your system,</span>
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="c1"># If the group doesn't exist, this command will not produce any output.</span>
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>$<span class="w"> </span>getent<span class="w"> </span>group<span class="w"> </span>docker
+</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>
+</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="c1"># This command will display all the groups that the user "bishow" is a member of.</span>
+</span><span id="__span-16-8"><a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>$<span class="w"> </span>groups<span class="w"> </span>bishow
+</span></code></pre></div>
+<p>Alternatively, you can also view the contents of the <code>/etc/group</code> file, which stores group information. You can use any text editor or commands like <code>cat</code> or <code>less</code> to view its contents:</p>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>$<span class="w"> </span>cat<span class="w"> </span>/etc/group
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="c1">#</span>
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>$<span class="w"> </span>grep<span class="w"> </span>docker<span class="w"> </span>/etc/group
+</span></code></pre></div>
 <blockquote>
 <p>Notes:</p>
 </blockquote>
@@ -2014,164 +1881,156 @@ $ grep docker /etc/group
 <blockquote>
 <p>Issue Solved:</p>
 </blockquote>
-<p>==permission denied while trying to connect to the Docker daemon socket at <code>unix:///var/run/docker.sock</code>==</p>
+<p><mark>permission denied while trying to connect to the Docker daemon socket at <code>unix:///var/run/docker.sock</code></mark></p>
 <ol>
 <li>
 <p>Check Docker Socket Permissions:</p>
 <p>Ensure that the Docker socket file (<code>/var/run/docker.sock</code>) has appropriate permissions for the "docker" group to read and write to it. You can check and adjust the permissions using the following commands:</p>
-<p><code>bash title="bash"
-ls -l /var/run/docker.sock
-sudo chmod 666 /var/run/docker.sock</code></p>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>ls<span class="w"> </span>-l<span class="w"> </span>/var/run/docker.sock
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>sudo<span class="w"> </span>chmod<span class="w"> </span><span class="m">666</span><span class="w"> </span>/var/run/docker.sock
+</span></code></pre></div>
 <p>The <strong>first command</strong> (<code>ls -l /var/run/docker.sock</code>) shows the current permissions, and the <strong>second command</strong> (<code>sudo chmod 666 /var/run/docker.sock</code>) grants read and write permissions to all users and groups.</p>
 </li>
 <li>
 <p>Restart Docker Service:</p>
 <p>Restart the Docker service to apply any changes to group memberships or permissions:</p>
-<p><code>bash title="bash"
-sudo systemctl restart docker</code></p>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>docker
+</span></code></pre></div>
 </li>
 <li>
 <p>Logout and Log Back In:</p>
 <p>If the above steps don't resolve the issue, try logging out and logging back in to refresh your session and apply any group membership changes:</p>
-<p><code>bash title="bash"
-logout</code></p>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="nb">logout</span>
+</span></code></pre></div>
 <p>Then log back in and try running <code>docker ps</code> again.</p>
 </li>
 </ol>
 <p>After performing these steps, try running <code>docker ps</code> again without sudo to check if the permission issue has been resolved. If you continue to encounter permission denied errors, further troubleshooting may be needed.</p>
-<hr />
+<hr>
 <h2 id="symlink-linux">Symlink <code>Linux</code></h2>
 <p>A symlink (also called a <code>symbolic link</code>) is a type of file in Linux that points to another file or a folder on your computer. Symlinks are similar to shortcuts in Windows.</p>
-<pre><code class="language-bash"># Create a symlink to Director/Folder
-$ ln -s /home/user/Folder &lt;symlink-dir&gt;
-
-# Unlink or Remove a symlink
-$ unlink &lt;path-to-symlink&gt;
-$ rm &lt;path-to-symlink&gt;
-
-# Find and Delete Broken Links
-$ find /home/james -xtype l
-$ find /home/james -xtype l -delete
-
-# Check file/folder is symlink
-$ ls -l &lt;path-to-assumed-symlink&gt;
-
-# SOLVED: sysmlink error
-# 1. Check the File/Folder is sysmlink corrupt or not
-# $ ls -l &lt;file/folder&gt;
-#
-# 2. Unlink the Filer/Folder
-# $ unlink &lt;file/folder&gt;
-#
-# 3. Create a File/Folder
-# $ mkdir Documents
-</code></pre>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="c1"># Create a symlink to Director/Folder</span>
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>$<span class="w"> </span>ln<span class="w"> </span>-s<span class="w"> </span>/home/user/Folder<span class="w"> </span>&lt;symlink-dir&gt;
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>
+</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="c1"># Unlink or Remove a symlink</span>
+</span><span id="__span-21-5"><a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>$<span class="w"> </span>unlink<span class="w"> </span>&lt;path-to-symlink&gt;
+</span><span id="__span-21-6"><a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a>$<span class="w"> </span>rm<span class="w"> </span>&lt;path-to-symlink&gt;
+</span><span id="__span-21-7"><a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a>
+</span><span id="__span-21-8"><a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a><span class="c1"># Find and Delete Broken Links</span>
+</span><span id="__span-21-9"><a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a>$<span class="w"> </span>find<span class="w"> </span>/home/james<span class="w"> </span>-xtype<span class="w"> </span>l
+</span><span id="__span-21-10"><a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a>$<span class="w"> </span>find<span class="w"> </span>/home/james<span class="w"> </span>-xtype<span class="w"> </span>l<span class="w"> </span>-delete
+</span><span id="__span-21-11"><a id="__codelineno-21-11" name="__codelineno-21-11" href="#__codelineno-21-11"></a>
+</span><span id="__span-21-12"><a id="__codelineno-21-12" name="__codelineno-21-12" href="#__codelineno-21-12"></a><span class="c1"># Check file/folder is symlink</span>
+</span><span id="__span-21-13"><a id="__codelineno-21-13" name="__codelineno-21-13" href="#__codelineno-21-13"></a>$<span class="w"> </span>ls<span class="w"> </span>-l<span class="w"> </span>&lt;path-to-assumed-symlink&gt;
+</span><span id="__span-21-14"><a id="__codelineno-21-14" name="__codelineno-21-14" href="#__codelineno-21-14"></a>
+</span><span id="__span-21-15"><a id="__codelineno-21-15" name="__codelineno-21-15" href="#__codelineno-21-15"></a><span class="c1"># SOLVED: sysmlink error</span>
+</span><span id="__span-21-16"><a id="__codelineno-21-16" name="__codelineno-21-16" href="#__codelineno-21-16"></a><span class="c1"># 1. Check the File/Folder is sysmlink corrupt or not</span>
+</span><span id="__span-21-17"><a id="__codelineno-21-17" name="__codelineno-21-17" href="#__codelineno-21-17"></a><span class="c1"># $ ls -l &lt;file/folder&gt;</span>
+</span><span id="__span-21-18"><a id="__codelineno-21-18" name="__codelineno-21-18" href="#__codelineno-21-18"></a><span class="c1">#</span>
+</span><span id="__span-21-19"><a id="__codelineno-21-19" name="__codelineno-21-19" href="#__codelineno-21-19"></a><span class="c1"># 2. Unlink the Filer/Folder</span>
+</span><span id="__span-21-20"><a id="__codelineno-21-20" name="__codelineno-21-20" href="#__codelineno-21-20"></a><span class="c1"># $ unlink &lt;file/folder&gt;</span>
+</span><span id="__span-21-21"><a id="__codelineno-21-21" name="__codelineno-21-21" href="#__codelineno-21-21"></a><span class="c1">#</span>
+</span><span id="__span-21-22"><a id="__codelineno-21-22" name="__codelineno-21-22" href="#__codelineno-21-22"></a><span class="c1"># 3. Create a File/Folder</span>
+</span><span id="__span-21-23"><a id="__codelineno-21-23" name="__codelineno-21-23" href="#__codelineno-21-23"></a><span class="c1"># $ mkdir Documents</span>
+</span></code></pre></div>
 <p>Reference</p>
 <ul>
 <li><a href="https://www.linode.com/docs/guides/linux-symlinks/">How to Create Linux Symlinks</a></li>
 <li><a href="https://www.freecodecamp.org/news/symlink-tutorial-in-linux-how-to-create-and-remove-a-symbolic-link/">Symlink Tutorial in Linux</a></li>
 </ul>
-<hr />
-<p><img alt="Iceberg Theory" src="https://www.mypspa.org/public/images/article/real/thumbs/alertpic_678345.jpeg" /></p>
-<hr />
-<p>!!! question "Linux"</p>
-<p>!!! example "Pass (<code>ubuntu</code>)"</p>
-<pre><code>pass is a very simple password store that keeps passwords inside `gpg`. It stores, retrieves, generates, and synchronizes passwords securely.
-
-```bash title="bash"
-$ sudo apt update
-$ sudo apt install pass
-```
-</code></pre>
-<p>??? example "<code>service</code> vs <code>systemctl</code>" </p>
-<pre><code>The commands sudo `service` and `systemctl` are both used for managing system services in Unix-like operating systems, but they have different purposes and usage patterns.
-
-1. **sudo service**:
-
-      `sudo service` is a command-line tool used for managing services on Unix-like systems, ==particularly those using **SysVinit** as the init     system==. It provides a simple and consistent interface for starting, stopping, restarting, and querying the status of services.
-
-      Usage:
-
-      ```bash title="bash"
-      # syntax
-      $ sudo service &lt;service_name&gt; &lt;action&gt;
-
-      #example
-      $ sudo systemctl restart apache2
-      ```
-
-      The service command is often used in older Linux distributions that still use SysVinit as the init system.
-
-2. **systemctl**:
-
-      `systemctl` is a command-line tool used for controlling the systemd system and service manager. ==`Systemd` is a modern init system== used by many     Linux distributions. systemctl allows you to manage services, units, targets, sockets, and more.
-
-      Usage:
-
-      ```bash title="bash"
-      $ sudo systemctl &lt;action&gt; &lt;service_name&gt;
-      $ sudo systemctl restart apache2
-      ```
-
-      `systemctl` provides more features and capabilities compared to `service`, and it's the preferred method for managing services on systems that use     systemd.
-
-In summary, if your system is using SysVinit as the init system, you would typically use `sudo service` to manage services. If your system is using systemd, `systemctl` is the preferred tool for service management. However, some distributions may provide compatibility layers or aliases to ensure compatibility between the two commands.
-</code></pre>
-<p>??? example "Creating a <code>User</code> ==without password=="</p>
-<pre><code>Yes, you can add the `jenkins` user without setting a password. This is often done for system users that don't require interactive login, such as the     `jenkins` user used for automation tasks.
-
-To add the `jenkins` user without setting a password, you can use the useradd command with the `-r` (or `--system`) option, which creates a system user     without a password or home directory. Here's the command:
-
-```sh title="bash"
-sudo useradd -r jenkins
-```
-
-This command creates the `jenkins` user as a system user. ==System users are typically used for services and daemons and do not have passwords or home     directories by default==.
-
-After adding the user, you can proceed to grant the necessary permissions to the `jenkins` user, such as adding it to the 'docker' group if needed, to allow it to perform specific tasks without requiring a password.
-</code></pre>
-<p>??? example "groups &amp; id in unix"</p>
-<pre><code>To see the permissions of a user on a Unix-like system, you can use the `groups` command or `id` command.
-
-```bash title="bash"
-# Syntax
-$ groups &lt;username&gt;
-$ id &lt;username&gt;
-
-# Example: ($USER refer to the currently logged-in user.)
-$ groups $USER
-```
-</code></pre>
-<p>??? example "<a href="https://phoenixnap.com/kb/how-to-install-xampp-on-ubuntu">Installing Xampp</a> in Linux"</p>
-<pre><code>  ```sh
-  # To Launch XAMPP
-  sudo /opt/lampp/./manager-linux-x64.run
-
-  # To Unistall
-  sudo /opt/lampp/./uninstall
-
-
-  # After uninstall, remove the directory
-  sudo rm -r /opt/lamp
-  ```
-
-  `sudo visudo` is a command used in Linux to edit the sudoers file, which determines who has administrative privileges on the system and what commands they can run with elevated permissions using the `sudo` command. The ==sudoers== file is crucial for system security, as it controls access to sensitive operations.
-
-  Here's what each part of the command does:
-
-  - `sudo`:
-
-        This is a command used in Unix-like operating systems to allow users to run programs with the security privileges of another user (usually the `superuser`, or "`root`"). It stands for "superuser do."
-
-  - `visudo`:
-
-        This is a command-line utility specifically designed for editing the ==sudoers file==. It opens the sudoers file in a text editor, but it performs some syntax checking before saving changes to ensure that the file remains in a valid state. This helps prevent accidental misconfigurations that could lock users out of administrative access or potentially compromise system security.
-
-  In summary, `sudo visudo` is used to safely edit the sudoers file, which is critical for managing user privileges and access control on a Linux system.
-
-  - [How to Install and Use XAMPP on Ubuntu](https://itsfoss.com/install-xampp-ubuntu/)
-</code></pre>
-<hr />
+<hr>
+<p><a class="glightbox" href="https://www.mypspa.org/public/images/article/real/thumbs/alertpic_678345.jpeg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Iceberg Theory" src="https://www.mypspa.org/public/images/article/real/thumbs/alertpic_678345.jpeg"></a></p>
+<hr>
+<div class="admonition question">
+<p class="admonition-title">Linux</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Pass (<code>ubuntu</code>)</p>
+<p>pass is a very simple password store that keeps passwords inside <code>gpg</code>. It stores, retrieves, generates, and synchronizes passwords securely.</p>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>$<span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>update
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>$<span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>pass
+</span></code></pre></div>
+</div>
+<details class="example">
+<summary><code>service</code> vs <code>systemctl</code></summary>
+<p>The commands sudo <code>service</code> and <code>systemctl</code> are both used for managing system services in Unix-like operating systems, but they have different purposes and usage patterns.</p>
+<ol>
+<li>
+<p><strong>sudo service</strong>:</p>
+<p><code>sudo service</code> is a command-line tool used for managing services on Unix-like systems, <mark>particularly those using <strong>SysVinit</strong> as the init     system</mark>. It provides a simple and consistent interface for starting, stopping, restarting, and querying the status of services.</p>
+<p>Usage:</p>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="c1"># syntax</span>
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>$<span class="w"> </span>sudo<span class="w"> </span>service<span class="w"> </span>&lt;service_name&gt;<span class="w"> </span>&lt;action&gt;
+</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>
+</span><span id="__span-23-4"><a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a><span class="c1">#example</span>
+</span><span id="__span-23-5"><a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a>$<span class="w"> </span>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>apache2
+</span></code></pre></div>
+<p>The service command is often used in older Linux distributions that still use SysVinit as the init system.</p>
+</li>
+<li>
+<p><strong>systemctl</strong>:</p>
+<p><code>systemctl</code> is a command-line tool used for controlling the systemd system and service manager. <mark><code>Systemd</code> is a modern init system</mark> used by many     Linux distributions. systemctl allows you to manage services, units, targets, sockets, and more.</p>
+<p>Usage:</p>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>$<span class="w"> </span>sudo<span class="w"> </span>systemctl<span class="w"> </span>&lt;action&gt;<span class="w"> </span>&lt;service_name&gt;
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>$<span class="w"> </span>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>apache2
+</span></code></pre></div>
+<p><code>systemctl</code> provides more features and capabilities compared to <code>service</code>, and it's the preferred method for managing services on systems that use     systemd.</p>
+</li>
+</ol>
+<p>In summary, if your system is using SysVinit as the init system, you would typically use <code>sudo service</code> to manage services. If your system is using systemd, <code>systemctl</code> is the preferred tool for service management. However, some distributions may provide compatibility layers or aliases to ensure compatibility between the two commands.</p>
+</details>
+<details class="example">
+<summary>Creating a <code>User</code> <mark>without password</mark></summary>
+<p>Yes, you can add the <code>jenkins</code> user without setting a password. This is often done for system users that don't require interactive login, such as the     <code>jenkins</code> user used for automation tasks.</p>
+<p>To add the <code>jenkins</code> user without setting a password, you can use the useradd command with the <code>-r</code> (or <code>--system</code>) option, which creates a system user     without a password or home directory. Here's the command:</p>
+<div class="language-sh highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>sudo<span class="w"> </span>useradd<span class="w"> </span>-r<span class="w"> </span>jenkins
+</span></code></pre></div>
+<p>This command creates the <code>jenkins</code> user as a system user. <mark>System users are typically used for services and daemons and do not have passwords or home     directories by default</mark>.</p>
+<p>After adding the user, you can proceed to grant the necessary permissions to the <code>jenkins</code> user, such as adding it to the 'docker' group if needed, to allow it to perform specific tasks without requiring a password.</p>
+</details>
+<details class="example">
+<summary>groups &amp; id in unix</summary>
+<p>To see the permissions of a user on a Unix-like system, you can use the <code>groups</code> command or <code>id</code> command.</p>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="c1"># Syntax</span>
+</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>$<span class="w"> </span>groups<span class="w"> </span>&lt;username&gt;
+</span><span id="__span-26-3"><a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a>$<span class="w"> </span>id<span class="w"> </span>&lt;username&gt;
+</span><span id="__span-26-4"><a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a>
+</span><span id="__span-26-5"><a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a><span class="c1"># Example: ($USER refer to the currently logged-in user.)</span>
+</span><span id="__span-26-6"><a id="__codelineno-26-6" name="__codelineno-26-6" href="#__codelineno-26-6"></a>$<span class="w"> </span>groups<span class="w"> </span><span class="nv">$USER</span>
+</span></code></pre></div>
+</details>
+<details class="example">
+<summary><a href="https://phoenixnap.com/kb/how-to-install-xampp-on-ubuntu">Installing Xampp</a> in Linux</summary>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="c1"># To Launch XAMPP</span>
+</span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>sudo<span class="w"> </span>/opt/lampp/./manager-linux-x64.run
+</span><span id="__span-27-3"><a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a>
+</span><span id="__span-27-4"><a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a><span class="c1"># To Unistall</span>
+</span><span id="__span-27-5"><a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a>sudo<span class="w"> </span>/opt/lampp/./uninstall
+</span><span id="__span-27-6"><a id="__codelineno-27-6" name="__codelineno-27-6" href="#__codelineno-27-6"></a>
+</span><span id="__span-27-7"><a id="__codelineno-27-7" name="__codelineno-27-7" href="#__codelineno-27-7"></a>
+</span><span id="__span-27-8"><a id="__codelineno-27-8" name="__codelineno-27-8" href="#__codelineno-27-8"></a><span class="c1"># After uninstall, remove the directory</span>
+</span><span id="__span-27-9"><a id="__codelineno-27-9" name="__codelineno-27-9" href="#__codelineno-27-9"></a>sudo<span class="w"> </span>rm<span class="w"> </span>-r<span class="w"> </span>/opt/lamp
+</span></code></pre></div>
+<p><code>sudo visudo</code> is a command used in Linux to edit the sudoers file, which determines who has administrative privileges on the system and what commands they can run with elevated permissions using the <code>sudo</code> command. The <mark>sudoers</mark> file is crucial for system security, as it controls access to sensitive operations.</p>
+<p>Here's what each part of the command does:</p>
+<ul>
+<li>
+<p><code>sudo</code>:</p>
+<div class="language-text highlight"><pre><span></span><code>This is a command used in Unix-like operating systems to allow users to run programs with the security privileges of another user (usually the `superuser`, or "`root`"). It stands for "superuser do."
+</code></pre></div>
+</li>
+<li>
+<p><code>visudo</code>:</p>
+<div class="language-text highlight"><pre><span></span><code>This is a command-line utility specifically designed for editing the ==sudoers file==. It opens the sudoers file in a text editor, but it performs some syntax checking before saving changes to ensure that the file remains in a valid state. This helps prevent accidental misconfigurations that could lock users out of administrative access or potentially compromise system security.
+</code></pre></div>
+</li>
+</ul>
+<p>In summary, <code>sudo visudo</code> is used to safely edit the sudoers file, which is critical for managing user privileges and access control on a Linux system.</p>
+<ul>
+<li><a href="https://itsfoss.com/install-xampp-ubuntu/">How to Install and Use XAMPP on Ubuntu</a></li>
+</ul>
+</details>
+<hr>
 <h2 id="reference">Reference</h2>
 <ul>
 <li><a href="https://leanpub.com/shellsamurai-master-the-linux-command-line">Shell Samurai by Stetson Blake</a></li>
@@ -2185,7 +2044,7 @@ $ groups $USER
 <ul>
 <li><a href="https://ecochallenge.org/iceberg-model/">a systems thinking model: the iceberg</a></li>
 <li><a href="https://untools.co/iceberg-model/">Iceberg Model</a></li>
-</ul>
+</ul></div>
 
 
 
@@ -2208,7 +2067,7 @@ $ groups $USER
         
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
   Back to top
 </button>
         
@@ -2221,35 +2080,35 @@ $ groups $USER
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../../cryptography/steganography/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Steganograpgy">
+          <a href="../kernel/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Kernel">
             <div class="md-footer__button md-icon">
               
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
             </div>
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Previous
               </span>
               <div class="md-ellipsis">
-                Steganograpgy
+                Kernel
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../university/intro/" class="md-footer__link md-footer__link--next" aria-label="Next: Intro">
+          <a href="../core/file-system-hierarchy/" class="md-footer__link md-footer__link--next" aria-label="Next: Linux File System">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Intro
+                Linux File System
               </div>
             </div>
             <div class="md-footer__button md-icon">
               
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
             </div>
           </a>
         
@@ -2268,6 +2127,20 @@ $ groups $USER
   
 </div>
       
+        <div class="md-social">
+  
+    
+    
+      
+    
+    
+    
+    <a href="https://bishowthapa.com/" target="_blank" rel="noopener me" title="website" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M433 179.11c0-97.2-63.71-125.7-63.71-125.7-62.52-28.7-228.56-28.4-290.48 0 0 0-63.72 28.5-63.72 125.7 0 115.7-6.6 259.4 105.63 289.1 40.51 10.7 75.32 13 103.33 11.4 50.81-2.8 79.32-18.1 79.32-18.1l-1.7-36.9s-36.31 11.4-77.12 10.1c-40.41-1.4-83-4.4-89.63-54a102.54 102.54 0 0 1-.9-13.9c85.63 20.9 158.65 9.1 178.75 6.7 56.12-6.7 105-41.3 111.23-72.9 9.8-49.8 9-121.5 9-121.5zm-75.12 125.2h-46.63v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.33V197c0-58.5-64-56.6-64-6.9v114.2H90.19c0-122.1-5.2-147.9 18.41-175 25.9-28.9 79.82-30.8 103.83 6.1l11.6 19.5 11.6-19.5c24.11-37.1 78.12-34.8 103.83-6.1 23.71 27.3 18.4 53 18.4 175z"/></svg>
+    </a>
+  
+</div>
+      
     </div>
   </div>
 </footer>
@@ -2278,11 +2151,11 @@ $ groups $USER
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["search.suggest", "search.highlight", "navigation.tabs", "navigation.top", "navigation.tabs.sticky", "header.autohide", "navigation.footer", "content.code.copy", "content.code.select"], "search": "../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["search.suggest", "search.highlight", "navigation.tabs", "navigation.top", "navigation.tabs.sticky", "header.autohide", "navigation.footer", "content.code.copy", "content.code.select"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "tags": {"Compatibility": "compat"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.56dfad97.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
     
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>
