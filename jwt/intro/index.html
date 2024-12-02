@@ -8,28 +8,28 @@
       
       
       
-        <link rel="canonical" href="https://thedatabaseguide.github.io/linux/core/permission-model/">
+        <link rel="canonical" href="https://thedatabaseguide.github.io/jwt/intro/">
       
       
-        <link rel="prev" href="../file-system-hierarchy/">
+        <link rel="prev" href="../../university/intro/">
       
       
-        <link rel="next" href="../../../university/intro/">
+        <link rel="next" href="../theory/">
       
       
-      <link rel="icon" href="../../../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.46">
     
     
       
-        <title>Permission Model - Database Docs</title>
+        <title>Intro - Database Docs</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.6f8fc17f.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6f8fc17f.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,14 +48,14 @@
       
     
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
     
-   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
         html.glightbox-open { overflow: initial; height: 100%; }
         .gslide-title { margin-top: 0px; user-select: text; }
         .gslide-desc { color: #666; user-select: text; }
@@ -66,7 +66,7 @@
             body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
             body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
             body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -84,6 +84,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#overview" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -96,7 +101,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="Database Docs" class="md-header__button md-logo" aria-label="Database Docs" data-md-component="logo">
+    <a href="../.." title="Database Docs" class="md-header__button md-logo" aria-label="Database Docs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -116,7 +121,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Permission Model
+              Intro
             
           </span>
         </div>
@@ -209,7 +214,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../blog/" class="md-tabs__link">
+        <a href="../../blog/" class="md-tabs__link">
           
   
   Blog
@@ -227,7 +232,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../database/intro/" class="md-tabs__link">
+        <a href="../../database/intro/" class="md-tabs__link">
           
   
   Database
@@ -245,7 +250,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../cryptography/intro/" class="md-tabs__link">
+        <a href="../../cryptography/intro/" class="md-tabs__link">
           
   
   Cryptography
@@ -259,13 +264,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../intro/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../linux/intro/" class="md-tabs__link">
           
   
   Linux
@@ -283,7 +286,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../university/intro/" class="md-tabs__link">
+        <a href="../../university/intro/" class="md-tabs__link">
           
   
   University
@@ -297,11 +300,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../../jwt/intro/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
           
   
   JWT
@@ -319,7 +324,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../docker/intro/" class="md-tabs__link">
+        <a href="../../docker/intro/" class="md-tabs__link">
           
   
   Docker
@@ -337,7 +342,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../books/tech-books/" class="md-tabs__link">
+        <a href="../../books/tech-books/" class="md-tabs__link">
           
   
   Books
@@ -376,7 +381,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Database Docs" class="md-nav__button md-logo" aria-label="Database Docs" data-md-component="logo">
+    <a href="../.." title="Database Docs" class="md-nav__button md-logo" aria-label="Database Docs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -434,7 +439,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../blog/" class="md-nav__link">
+      <a href="../../blog/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -495,7 +500,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../blog/archive/2024/" class="md-nav__link">
+      <a href="../../blog/archive/2024/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -569,7 +574,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../database/intro/" class="md-nav__link">
+      <a href="../../database/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -628,7 +633,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../database/mysql/intro/" class="md-nav__link">
+      <a href="../../database/mysql/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -695,7 +700,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../database/postgresql/intro/" class="md-nav__link">
+      <a href="../../database/postgresql/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -762,7 +767,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../database/mongodb/intro/" class="md-nav__link">
+      <a href="../../database/mongodb/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -829,7 +834,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../database/firebase/intro/" class="md-nav__link">
+      <a href="../../database/firebase/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -903,7 +908,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../cryptography/intro/" class="md-nav__link">
+      <a href="../../cryptography/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -924,7 +929,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../cryptography/steganography/" class="md-nav__link">
+      <a href="../../cryptography/steganography/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -949,28 +954,23 @@
       
   
   
-    
   
   
-  
     
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -981,7 +981,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Linux
@@ -995,7 +995,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../intro/" class="md-nav__link">
+      <a href="../../linux/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1016,7 +1016,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../distros/" class="md-nav__link">
+      <a href="../../linux/distros/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1037,7 +1037,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../kernel/" class="md-nav__link">
+      <a href="../../linux/kernel/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1058,7 +1058,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../debian/" class="md-nav__link">
+      <a href="../../linux/debian/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1079,7 +1079,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux-directory-structure/" class="md-nav__link">
+      <a href="../../linux/linux-directory-structure/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1097,8 +1097,6 @@
                 
   
   
-    
-  
   
   
     
@@ -1108,11 +1106,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
         
           
           <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
@@ -1126,7 +1124,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_6">
             <span class="md-nav__icon md-icon"></span>
             CORE
@@ -1140,7 +1138,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../file-system-hierarchy/" class="md-nav__link">
+      <a href="../../linux/core/file-system-hierarchy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1158,17 +1156,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../linux/core/permission-model/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1177,7 +1168,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -1243,7 +1233,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../university/intro/" class="md-nav__link">
+      <a href="../../university/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1268,23 +1258,28 @@
       
   
   
+    
   
   
+  
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -1295,7 +1290,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             JWT
@@ -1306,10 +1301,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../jwt/intro/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Intro
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1318,6 +1331,75 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#types-of-jwt-based-on-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Types of JWT Based on Usage:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#types-of-jwt-based-on-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Types of JWT Based on Algorithm:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reference
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1330,7 +1412,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../jwt/theory/" class="md-nav__link">
+      <a href="../theory/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1389,7 +1471,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../jwt/refreshToken/intro/" class="md-nav__link">
+      <a href="../refreshToken/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1463,7 +1545,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../docker/intro/" class="md-nav__link">
+      <a href="../../docker/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1484,7 +1566,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../docker/react-dockerize-locally/" class="md-nav__link">
+      <a href="../../docker/react-dockerize-locally/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1550,7 +1632,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../books/tech-books/" class="md-nav__link">
+      <a href="../../books/tech-books/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1571,7 +1653,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../books/docker-compose/" class="md-nav__link">
+      <a href="../../books/docker-compose/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1592,7 +1674,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../books/jenkins-guide/" class="md-nav__link">
+      <a href="../../books/jenkins-guide/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1613,7 +1695,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../books/pocket-devops/" class="md-nav__link">
+      <a href="../../books/pocket-devops/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1652,6 +1734,65 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#types-of-jwt-based-on-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Types of JWT Based on Usage:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#types-of-jwt-based-on-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Types of JWT Based on Algorithm:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reference
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1665,9 +1806,106 @@
                   
 
 
-  <h1>Permission Model</h1>
+  <h1>Intro</h1>
 
-<p>Linux File System</p>
+<div><p><a href="https://fusionauth.io/dev-tools/jwt-decoder">jwt decoder</a></p>
+<p><a class="glightbox" href="https://fusionauth.io/img/shared/json-web-token.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="https://fusionauth.io/articles/tokens/jwt-components-explained" src="https://fusionauth.io/img/shared/json-web-token.png"></a>
+<a class="glightbox" href="https://miro.medium.com/v2/resize:fit:720/format:webp/1*QBx95Rpo6XUoC_8WkMY3Lg.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="https://medium.com/@m.mobasher.z/a-comprehensive-guide-to-json-web-token-jwt-a04da972b518" src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*QBx95Rpo6XUoC_8WkMY3Lg.png"></a></p>
+<p><a class="glightbox" href="https://miro.medium.com/v2/resize:fit:720/format:webp/0*GzY6dMeKo6Oglg5N.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="https://medium.com/@insiyapithapur/jwt-authentication-refresh-token-and-access-token-2da8a3d36b49" src="https://miro.medium.com/v2/resize:fit:720/format:webp/0*GzY6dMeKo6Oglg5N.png"></a></p>
+<hr>
+<h2 id="overview">Overview</h2>
+<p>In JSON Web Tokens (JWT), there are three main parts: Header, Payload, and Signature</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">JWT Header</label><label for="__tabbed_1_2">JWT Payload</label><label for="__tabbed_1_3">JWT Signature</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>The header typically contains two key pieces of information:</p>
+<ul>
+<li><code>alg</code>: The signing algorithm used, such as <code>HS256</code>, <code>RS256</code>, or <code>ES256</code> (e.g., HMAC, RSA, ECDSA).</li>
+<li><code>typ</code>: (Optional) The type of the token, which is usually <code>JWT</code>.</li>
+</ul>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>{
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    "alg": "HS256",
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    "typ": "JWT"
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>}
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<p>The payload contains the claims, which are the statements about an entity (typically, the user) and additional data. There are three types of claims:</p>
+<ul>
+<li>
+<p><strong>Registered Claims</strong>: These are predefined claims with standard meanings, such as:</p>
+<ul>
+<li><code>iss</code> (Issuer): Identifies the principal that issued the token.</li>
+<li><code>sub</code> (Subject): Identifies the principal that is the subject of the token (usually the user).</li>
+<li><code>aud</code> (Audience): Identifies the recipients that the token is intended for.</li>
+<li><code>exp</code> (Expiration Time): Defines the expiration time of the token.</li>
+<li><code>nbf</code> (Not Before): Defines the time before which the token is not valid.</li>
+<li><code>iat</code> (Issued At): Identifies when the token was issued.</li>
+</ul>
+</li>
+<li>
+<p><strong>Public Claims</strong>: Custom claims that can be defined by anyone. These should be namespaced to avoid collisions.</p>
+</li>
+<li>
+<p><strong>Private Claims</strong>: Claims that are agreed upon by the parties using the token, which are not registered or public but are used for specific purposes (e.g., a user’s roles or permissions).</p>
+</li>
+</ul>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>{
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    "sub": "1234567890",
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    "name": "John Doe",
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    "iat": 1516239022
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>}
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<p>The signature is used to verify that the sender of the JWT is who it says it is, and to ensure that the message wasn’t changed along the way. It’s created by taking the encoded header and payload, applying the signing algorithm, and then signing it with a secret key (HMAC) or a private key (RSA or ECDSA).</p>
+<p>For example, if you are using the HMAC SHA-256 algorithm (<code>HS256</code>), the signature is created like this:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>HMACSHA256(
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>base64UrlEncode(header) + "." + base64UrlEncode(payload),
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>secret)
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<hr>
+<h3 id="types-of-jwt-based-on-usage">Types of JWT Based on Usage:</h3>
+<p>JWTs can be categorized by their intended use:</p>
+<ul>
+<li>
+<p><strong>Access Tokens</strong>: These tokens are used to grant access to a resource (e.g., an API). They often have an expiration time and are usually short-lived.</p>
+</li>
+<li>
+<p><strong>Refresh Tokens</strong>: These tokens are used to obtain a new access token after the original access token expires. They are typically long-lived and stored securely.</p>
+</li>
+<li>
+<p><strong>ID Tokens</strong>: These are tokens used in OpenID Connect (OIDC) authentication. They contain information about the authenticated user (e.g., user profile information) and are typically used in identity verification.</p>
+</li>
+</ul>
+<hr>
+<h3 id="types-of-jwt-based-on-algorithm">Types of JWT Based on Algorithm:</h3>
+<p>JWTs also differ based on the algorithm used for signing. Some common algorithms include:</p>
+<ul>
+<li><strong>HS256 (HMAC with SHA-256)</strong>: Symmetric signing algorithm where the same secret key is used to both sign and verify the token.</li>
+<li><strong>RS256 (RSA with SHA-256)</strong>: Asymmetric signing algorithm using a public/private key pair.</li>
+<li><strong>ES256 (ECDSA with SHA-256)</strong>: Asymmetric signing algorithm using Elliptic Curve Digital Signature Algorithm.</li>
+</ul>
+<hr>
+<h3 id="summary">Summary:</h3>
+<p>While there are not strictly defined "types" of JWTs, you can think of different JWTs based on:</p>
+<ul>
+<li><strong>Structure</strong>: Header, Payload, and Signature.</li>
+<li><strong>Usage</strong>: Access Token, Refresh Token, ID Token.</li>
+<li><strong>Signing Algorithms</strong>: HS256, RS256, ES256, etc.</li>
+</ul>
+<p>These are the most common ways JWTs are categorized or described.</p>
+<hr>
+<h2 id="reference">Reference</h2>
+<ul>
+<li><a href="https://medium.com/@insiyapithapur/jwt-authentication-refresh-token-and-access-token-2da8a3d36b49">JWT Authentication : Refresh token and Access token</a></li>
+<li><a href="https://auth0.com/blog/refresh-tokens-what-are-they-and-when-to-use-them/">What Are Refresh Tokens and How to Use Them Securel</a></li>
+<li><a href="https://support.okta.com/help/s/article/What-is-the-lifetime-of-the-JWT-tokens?language=en_US">What Is the Lifetime of Okta Minted JSON Web Tokens(JWT)</a></li>
+<li><a href="https://www.baeldung.com/cs/json-web-token-refresh-token">Significance of a JWT Refresh Token</a></li>
+</ul></div>
 
 
 
@@ -1703,7 +1941,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../file-system-hierarchy/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Linux File System">
+          <a href="../../university/intro/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Intro">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1713,20 +1951,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Linux File System
+                Intro
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../../university/intro/" class="md-footer__link md-footer__link--next" aria-label="Next: Intro">
+          <a href="../theory/" class="md-footer__link md-footer__link--next" aria-label="Next: Theory">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Intro
+                Theory
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -1774,10 +2012,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["search.suggest", "search.highlight", "navigation.tabs", "navigation.top", "navigation.tabs.sticky", "header.autohide", "navigation.footer", "content.code.copy", "content.code.select"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "tags": {"Compatibility": "compat"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["search.suggest", "search.highlight", "navigation.tabs", "navigation.top", "navigation.tabs.sticky", "header.autohide", "navigation.footer", "content.code.copy", "content.code.select"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "tags": {"Compatibility": "compat"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
       
     
   <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
