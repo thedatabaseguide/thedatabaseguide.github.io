@@ -8,11 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://thedatabaseguide.github.io/books/pocket-devops/">
+        <link rel="canonical" href="https://thedatabaseguide.github.io/linux/ubuntu-logrotation/">
       
       
-        <link rel="prev" href="../jenkins-guide/">
+        <link rel="prev" href="../core/permission-model/">
       
+      
+        <link rel="next" href="../../docker/intro/">
       
       
       <link rel="icon" href="../../assets/logo/favicon.ico">
@@ -20,7 +22,7 @@
     
     
       
-        <title>Pocker Devops - Database Docs</title>
+        <title>Ubuntu LogRotation - Database Docs</title>
       
     
     
@@ -83,7 +85,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#devops" class="md-skip">
+        <a href="#overview" class="md-skip">
           Skip to content
         </a>
       
@@ -118,7 +120,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Pocker Devops
+              Ubuntu LogRotation
             
           </span>
         </div>
@@ -261,11 +263,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../linux/intro/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../intro/" class="md-tabs__link">
           
   
   Linux
@@ -297,13 +301,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../tech-books/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../books/tech-books/" class="md-tabs__link">
           
   
   Books
@@ -914,23 +916,28 @@
       
   
   
+    
   
   
+  
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -941,7 +948,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Linux
@@ -955,7 +962,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/intro/" class="md-nav__link">
+      <a href="../intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -976,7 +983,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/distros/" class="md-nav__link">
+      <a href="../distros/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -997,7 +1004,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/kernel/" class="md-nav__link">
+      <a href="../kernel/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1018,7 +1025,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/debian/" class="md-nav__link">
+      <a href="../debian/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1039,7 +1046,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/linux-directory-structure/" class="md-nav__link">
+      <a href="../linux-directory-structure/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1098,7 +1105,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/core/file-system-hierarchy/" class="md-nav__link">
+      <a href="../core/file-system-hierarchy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1119,7 +1126,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/core/permission-model/" class="md-nav__link">
+      <a href="../core/permission-model/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1145,10 +1152,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../linux/ubuntu-logrotation/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Ubuntu LogRotation
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1157,6 +1182,93 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-log-rotation-in-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is Log Rotation in Linux?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#default-log-rotation-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Default Log Rotation Configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-the-default-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Check the Default Configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#log-rotation-for-different-use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Log Rotation for Different Use Cases
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#question" class="md-nav__link">
+    <span class="md-ellipsis">
+      Question
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1260,28 +1372,23 @@
       
   
   
-    
   
   
-  
     
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
         
           
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1292,7 +1399,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Books
@@ -1306,7 +1413,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tech-books/" class="md-nav__link">
+      <a href="../../books/tech-books/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1327,7 +1434,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../docker-compose/" class="md-nav__link">
+      <a href="../../books/docker-compose/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1348,7 +1455,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../jenkins-guide/" class="md-nav__link">
+      <a href="../../books/jenkins-guide/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1366,30 +1473,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Pocker Devops
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../books/pocket-devops/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1398,164 +1485,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#running-hello-world-in-docker" class="md-nav__link">
-    <span class="md-ellipsis">
-      Running Hello World in Docker
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#knowing-the-difference-between-containers-and-virtual-machines" class="md-nav__link">
-    <span class="md-ellipsis">
-      Knowing the Difference Between Containers and Virtual Machines
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dockerfile" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dockerfile
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#docker-image" class="md-nav__link">
-    <span class="md-ellipsis">
-      Docker Image
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#docker-container" class="md-nav__link">
-    <span class="md-ellipsis">
-      Docker Container
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#bind-mounts-and-volumes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Bind Mounts and Volumes
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#docker-engine" class="md-nav__link">
-    <span class="md-ellipsis">
-      Docker Engine
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Docker Engine">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#docker-daemon" class="md-nav__link">
-    <span class="md-ellipsis">
-      Docker Daemon
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#docker-cli" class="md-nav__link">
-    <span class="md-ellipsis">
-      Docker CLI
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#docker-api" class="md-nav__link">
-    <span class="md-ellipsis">
-      Docker API
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#docker-compose" class="md-nav__link">
-    <span class="md-ellipsis">
-      Docker Compose
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#volume" class="md-nav__link">
-    <span class="md-ellipsis">
-      Volume
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Volume">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#docker-volume-subcommands" class="md-nav__link">
-    <span class="md-ellipsis">
-      Docker Volume Subcommands
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#hands-on-docker-commands" class="md-nav__link">
-    <span class="md-ellipsis">
-      Hands on Docker Commands
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1585,8 +1514,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1595,91 +1522,64 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#running-hello-world-in-docker" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Running Hello World in Docker
+      Overview
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#knowing-the-difference-between-containers-and-virtual-machines" class="md-nav__link">
-    <span class="md-ellipsis">
-      Knowing the Difference Between Containers and Virtual Machines
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dockerfile" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dockerfile
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#docker-image" class="md-nav__link">
-    <span class="md-ellipsis">
-      Docker Image
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#docker-container" class="md-nav__link">
-    <span class="md-ellipsis">
-      Docker Container
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#bind-mounts-and-volumes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Bind Mounts and Volumes
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#docker-engine" class="md-nav__link">
-    <span class="md-ellipsis">
-      Docker Engine
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Docker Engine">
+    <nav class="md-nav" aria-label="Overview">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#docker-daemon" class="md-nav__link">
+  <a href="#what-is-log-rotation-in-linux" class="md-nav__link">
     <span class="md-ellipsis">
-      Docker Daemon
+      What is Log Rotation in Linux?
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#docker-cli" class="md-nav__link">
+  <a href="#default-log-rotation-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      Docker CLI
+      Default Log Rotation Configuration
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#docker-api" class="md-nav__link">
+  <a href="#check-the-default-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      Docker API
+      Check the Default Configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#log-rotation-for-different-use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Log Rotation for Different Use Cases
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#question" class="md-nav__link">
+    <span class="md-ellipsis">
+      Question
     </span>
   </a>
   
@@ -1687,48 +1587,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#docker-compose" class="md-nav__link">
-    <span class="md-ellipsis">
-      Docker Compose
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#volume" class="md-nav__link">
-    <span class="md-ellipsis">
-      Volume
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Volume">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#docker-volume-subcommands" class="md-nav__link">
-    <span class="md-ellipsis">
-      Docker Volume Subcommands
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#hands-on-docker-commands" class="md-nav__link">
-    <span class="md-ellipsis">
-      Hands on Docker Commands
-    </span>
-  </a>
   
 </li>
       
@@ -1747,131 +1605,102 @@
                   
 
 
-<div><h1 id="devops">Devops</h1>
-<h2 id="running-hello-world-in-docker">Running Hello World in Docker</h2>
-<blockquote>
-<p>Problem</p>
-</blockquote>
-<p>You have access to a Docker host and want to run your first container. You want to learn the various life cycles of a container. As an example, you want to run a container and echo Hello World in it.</p>
-<blockquote>
-<p>Solution</p>
-</blockquote>
-<p>Typing docker at the prompt returns the usage of the docker command:</p>
-<p><code>$ docker</code></p>
-<p>Usage: <code>docker [OPTIONS] COMMAND [arg...]</code></p>
-<p>A self-sufficient runtime for linux containers.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Unable to find image 'busybox' locally
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>busybox:latest: The image you are pulling has been verified
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>511136ea3c5a: Pull complete
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>df7546f9f060: Pull complete
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>e433a6c5b276: Pull complete
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>e72ac664f4f0: Pull complete
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>Status: Downloaded newer image for busybox:latest
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>hello world
+  <h1>Ubuntu LogRotation</h1>
+
+<div><h2 id="overview">Overview</h2>
+<h3 id="what-is-log-rotation-in-linux">What is Log Rotation in Linux?</h3>
+<p>Log rotation in Linux is the process of managing log files by renaming or compressing old log files and creating new ones to prevent log files from growing too large and consuming excessive disk space. Over time, log files can become very large, which can lead to performance issues, file system space exhaustion, and difficulties in managing logs.</p>
+<p>The utility <code>logrotate</code> is commonly used to automate this process on Linux systems. It allows for the rotation, compression, removal, and mailing of log files. Log rotation helps keep logs organized and ensures that your system doesn't run out of space due to excessive log file growth.</p>
+<h3 id="default-log-rotation-configuration">Default Log Rotation Configuration</h3>
+<p>On most Linux systems, log rotation is managed by <code>logrotate</code>. The main configuration file for <code>logrotate</code> is typically found at:</p>
+<ul>
+<li><code>/etc/logrotate.conf</code></li>
+</ul>
+<p>Additionally, there may be individual configuration files in the <code>/etc/logrotate.d/</code> directory for specific applications.</p>
+<h3 id="check-the-default-configuration">Check the Default Configuration</h3>
+<p>To view the default logrotate configuration, run:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>cat<span class="w"> </span>/etc/logrotate.conf
 </span></code></pre></div>
-<p><mark>Containers are based on images</mark>. An image needs to be passed to the <code>docker run</code> command. In the preceding example, you specify an image called busybox. Docker does not have this image locally and pulls it from a public registry. A registry is a catalog of Docker images that the Docker client can communicate with and download images from. Once the image is pulled, Docker starts a container and executes the echo hello world command. Congratulations—you ran your first container.</p>
-<hr>
-<h2 id="knowing-the-difference-between-containers-and-virtual-machines">Knowing the Difference Between Containers and Virtual Machines</h2>
-<p>In comparison, with <code>containers</code>, the <mark>sharing of the host OS’s kernel</mark> with the application means that the overhead of an additional OS is removed.</p>
-<h2 id="dockerfile">Dockerfile</h2>
-<p>A Dockerfile is a set of instructions that tells Docker how to build an image. A typical Dockerfile is made up of the following:</p>
-<ul>
-<li>A <code>FROM</code> instruction that tells Docker what the base image is</li>
-<li>An <code>ENV</code> instruction to pass an environment variable.</li>
-<li>A <code>RUN</code> instruction to run some shell commands (for example, install-dependent programs not available in the base image).</li>
-<li>A <code>CMD</code> or an <code>ENTRYPOINT</code> instruction that tells Docker which executable to run when a container is started.</li>
-</ul>
-<h2 id="docker-image">Docker Image</h2>
-<p><code>Docker image</code> is a <mark>read-only template</mark> that forms the foundation of your application Docker images are created using a <code>series of commands</code>, known as instructions, in the <code>Dockerfile</code>. </p>
-<p>Breakdown of a <code>.Dockerfile</code></p>
-<ul>
-<li>A Docker image starts with a <mark>base image</mark>, such as Ubuntu.</li>
-<li>On top of this image, we can add build our <mark>application stack</mark> adding the packages as and when required.</li>
-</ul>
-<blockquote>
-<p>Notes:</p>
-</blockquote>
-<p>On the advanced scale, to keep the image size as low as possible, we can also start with slim packages, such as <code>Alpine</code> or even Scratch, which is Docker’s reserved, minimal starting image for building other images.</p>
-<p>Every Docker image has an <code>associated tag</code>. Tags typically include <code>names</code> and <code>version labels</code>. While it is not mandatory to associate a version tag with a Docker image name, these tags make it easier to roll back to previous versions. Without a tag name, Docker must fetch the image with the latest tag. You can also provide a tag name to force-fetch a tagged image.</p>
-<h2 id="docker-container">Docker Container</h2>
-<p>A Docker image, when it’s run in a host computer, spawns a process with its own namespace, known as a Docker container.</p>
-<p>The <code>main difference between</code> a Docker <code>image</code> and a <code>container</code> is the presence of a thin read/write layer known as the <mark>container layer</mark>. Any changes to the filesystem of a container, such as writing new files or modifying existing files, are done to this writable container layer than the lower layers.</p>
-<p><mark>An important aspect to grasp</mark> is that when a container is running, the changes are applied to the container layer and when the container is stopped/killed, the container layer is not saved. Hence, all changes are lost. </p>
-<p>This aspect of containers is not understood very well and for this reason, stateful applications and those requiring persistent data were initially not recommended as containerized applications. However, with <code>Docker Volumes</code>, there are ways to get around this limitation.</p>
-<h2 id="bind-mounts-and-volumes">Bind Mounts and Volumes</h2>
-<p>Docker provides different ways to mount data into a container from the Docker host: </p>
-<ul>
-<li>volumes,</li>
-<li>bind mounts, &amp; </li>
-<li>tmpfs volumes.</li>
-</ul>
-<p>While <code>tmpfs volumes</code> are stored in the host system’s memory only, <code>bind mounts</code> and <code>volumes</code> are stored in the host filesystem</p>
-<hr>
-<h2 id="docker-engine">Docker Engine</h2>
-<p>Docker Engine is the core part of Docker. Docker Engine is a client-server application that provides the platform, the runtime, and the tooling for building and managing Docker images, Docker containers, and more. Docker Engine provides the following:</p>
-<ul>
-<li>Docker daemon</li>
-<li>Docker CLI</li>
-<li>Docker API</li>
-</ul>
-<h3 id="docker-daemon">Docker Daemon</h3>
-<p>The Docker daemon is a <code>service</code> that <mark>runs in the background of the host computer</mark> and handles the heavy lifting of most of the Docker commands. The daemon listens for API requests for creating and managing Docker objects, such as <code>containers</code>, <code>networks</code>, and <code>volumes</code>.</p>
-<h3 id="docker-cli">Docker CLI</h3>
-<p>Docker CLI is the primary way that you will interact with Docker. Docker CLI exposes a set of commands that you can provide. The Docker CLI forwards the request to Docker daemon, which then performs the necessary work.</p>
-<p>While the Docker CLI includes a huge variety of commands and sub-commands, the most common commands that we will work with in this book are as mentioned:</p>
-<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>$<span class="w"> </span>docker<span class="w"> </span>build
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>$<span class="w"> </span>docker<span class="w"> </span>pull
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>$<span class="w"> </span>docker<span class="w"> </span>run
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>$<span class="w"> </span>docker<span class="w"> </span><span class="nb">exec</span>
+<p>Here is an example of a typical <code>/etc/logrotate.conf</code>:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a># Global options
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>weekly              # Rotate logs weekly
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>rotate 4            # Keep 4 rotated logs (old logs will be deleted after the 4th rotation)
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>create              # Create new empty logs after rotation
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>dateext             # Use date extension for rotated logs (e.g., log-2024-11-18.gz)
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>compress            # Compress rotated logs
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>delaycompress       # Delay compression until the next rotation
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>notifempty          # Do not rotate empty logs
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>sharedscripts       # Run post-rotate script only once for all logs
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>include /etc/logrotate.d/ # Include individual app-specific configurations
 </span></code></pre></div>
-<h3 id="docker-api">Docker API</h3>
-<p>Docker also provides an API for interacting with the Docker Engine. This is particularly useful if there’s a need to create or manage containers from within applications. </p>
+<h3 id="log-rotation-for-different-use-cases">Log Rotation for Different Use Cases</h3>
+<ul>
+<li><strong>System Logs</strong>: Typically rotated weekly or monthly, retaining a few weeks or months of logs.</li>
+<li><strong>Web Server Logs</strong>: Often rotated daily due to the high volume of logs generated by web traffic.</li>
+<li><strong>Application Logs</strong>: Depending on the application, rotation frequency can be adjusted based on how much data is generated (e.g., a database might generate logs daily, whereas a low-traffic application might rotate monthly).</li>
+</ul>
+<h3 id="summary">Summary</h3>
+<p>Log rotation is necessary in Linux to manage log file growth, ensure efficient disk usage, and maintain log integrity. By configuring <code>logrotate</code>, system administrators can automatically rotate, compress, and delete logs, preventing logs from taking up excessive disk space and ensuring system performance remains optimal.</p>
+<details class="tip" open="open">
+<summary>Key benefits of log rotation:</summary>
+<ul>
+<li>Prevents disk space exhaustion.</li>
+<li>Keeps logs manageable for easier analysis.</li>
+<li>Improves system performance by preventing large log files from being accessed or written to excessively.</li>
+<li>Ensures compliance with regulatory requirements regarding log retention.</li>
+</ul>
+</details>
 <hr>
-<h2 id="docker-compose">Docker Compose</h2>
-<p>Docker Compose is a tool for defining and <code>running multi-container applications</code>. Much like how Docker allows you to build an image for your application and run it in your container, Compose use the same images in combination with a definition file (known as the compose file) to build, launch, and run multi-container applications, including dependent and linked containers.</p>
-<p>The most common use case for Docker Compose is to run applications and their dependent services (such as databases and caching providers) in the same simple, streamlined manner as running a single container application.</p>
+<h3 id="question">Question</h3>
+<div class="admonition question">
+<p class="admonition-title">Why ubunutu log take lot of space issue ?</p>
+</div>
+<p>In Ubuntu (or any Linux-based system), large amounts of disk space can sometimes be consumed by log files. This can happen due to a variety of reasons. Below are some of the common causes and how you can address them:</p>
+<p><strong>1. Log Rotation Issues</strong></p>
+<p>Ubuntu uses <code>logrotate</code>, a utility that automatically rotates and compresses log files to prevent them from consuming too much space. If log rotation is not configured properly, logs can accumulate and grow indefinitely.</p>
+<details class="tip" open="open">
+<summary>Fix:</summary>
+<ul>
+<li>Check if <code>logrotate</code> is working correctly. You can inspect its configuration at <code>/etc/logrotate.conf</code> and the directory <code>/etc/logrotate.d/</code>.</li>
+<li>You can manually rotate logs by running:</li>
+</ul>
+</details>
+<p><strong>Rotate logs:</strong></p>
+<p>If logs have grown too large, you can rotate them manually using <code>logrotate</code>, or you can use <code>truncate</code> to reduce the file size temporarily (but this doesn’t resolve the root cause):</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>sudo<span class="w"> </span>truncate<span class="w"> </span>-s<span class="w"> </span><span class="m">0</span><span class="w"> </span>/var/log/kern.log
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>sudo<span class="w"> </span>truncate<span class="w"> </span>-s<span class="w"> </span><span class="m">0</span><span class="w"> </span>/var/log/syslog
+</span></code></pre></div>
+<details class="warning" open="open">
+<summary>Check for disk and file system issues</summary>
+<p>If <code>kern.log</code> is growing rapidly, it could indicate that there are disk errors or file system issues being logged. Check the health of the disk and file system using tools like <a href="#">smartctl</a> for <mark>disk health</mark> or <a href="#">fsck</a> for <mark>file system</mark> checks.</p>
+</details>
 <hr>
-<h2 id="volume">Volume</h2>
-<p>Docker volumes are the current recommended method of persisting data stored in containers. Volumes are completely managed by Docker and have many advantages over bind mounts:</p>
-<h3 id="docker-volume-subcommands">Docker Volume Subcommands</h3>
-<p>Docker exposes the Volume API as a series of subcommands.</p>
-<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>$<span class="w"> </span>docker<span class="w"> </span>volume<span class="w"> </span>create
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>$<span class="w"> </span>docker<span class="w"> </span>volume<span class="w"> </span>inspect
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>$<span class="w"> </span>docker<span class="w"> </span>volume<span class="w"> </span>ls
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>$<span class="w"> </span>docker<span class="w"> </span>volume<span class="w"> </span>prune
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>$<span class="w"> </span>docker<span class="w"> </span>volume<span class="w"> </span>rm
+<details class="note">
+<summary>smartctl Overview</summary>
+<p><code>smartctl</code> is a command-line utility used to interact with the <strong>S.M.A.R.T.</strong> (Self-Monitoring, Analysis, and Reporting Technology) system, which is built into most modern hard drives and SSDs. S.M.A.R.T. provides diagnostic and health information about your storage devices, such as error rates, temperature, and wear level, helping to predict drive failures before they occur.</p>
+<p><code>smartctl</code> is part of the <code>smartmontools</code> package, which is often included by default in many Linux distributions. However, if it's not installed on your system, you can install it manually.</p>
+<p><strong>How to Install <code>smartmontools</code> on Ubuntu</strong></p>
+<p>If <code>smartctl</code> is not already installed, you can install it by running the following command:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>update
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>smartmontools
 </span></code></pre></div>
 <hr>
-<h2 id="hands-on-docker-commands">Hands on Docker <code>Commands</code></h2>
-<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># Make sure the docke in installed</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>$<span class="w"> </span>docker<span class="w"> </span>info
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c1"># Working with Docker Images</span>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="c1"># listing of the images available locally</span>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>$<span class="w"> </span>docker<span class="w"> </span>image<span class="w"> </span>ls
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="c1"># docker inspect command provides a lot of information about the image</span>
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>$<span class="w"> </span>docker<span class="w"> </span>image<span class="w"> </span>inspect<span class="w"> </span>hello-world
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>
-</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="c1"># Of importance are the image properties Env, Cmd, and Layers,</span>
-</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="c1"># which tell us about these environment variables.</span>
-</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>
-</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="c1"># Env</span>
-</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>$<span class="w"> </span>docker<span class="w"> </span>image<span class="w"> </span>inspect<span class="w"> </span>hello-world<span class="w"> </span><span class="p">|</span><span class="w"> </span>jq<span class="w"> </span>.<span class="o">[]</span>.Config.Env
-</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>
-</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="c1"># startup command on the container</span>
-</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>$<span class="w"> </span>docker<span class="w"> </span>image<span class="w"> </span>inspect<span class="w"> </span>hello-world<span class="w"> </span><span class="p">|</span><span class="w"> </span>jq<span class="w"> </span>.<span class="o">[]</span>.Config.Cmd
-</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>
-</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="c1"># layers associated with the image</span>
-</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>$<span class="w"> </span>docker<span class="w"> </span>image<span class="w"> </span>inspect<span class="w"> </span>hello-world<span class="w"> </span><span class="p">|</span><span class="w"> </span>jq<span class="w"> </span>.<span class="o">[]</span>.RootFS.Layers
-</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>
-</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a><span class="c1">#</span>
-</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>$<span class="w"> </span>docker<span class="w"> </span>image<span class="w"> </span>inspect<span class="w"> </span>nginx<span class="w"> </span><span class="p">|</span><span class="w"> </span>jq<span class="w"> </span>.<span class="o">[]</span>.Config.ExposedPorts
-</span></code></pre></div></div>
+<p><strong>Using <code>smartctl</code></strong></p>
+<ul>
+<li>
+<p>Check the health status of your drive</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>sudo<span class="w"> </span>smartctl<span class="w"> </span>-H<span class="w"> </span>/dev/sda
+</span></code></pre></div>
+</li>
+</ul>
+</details>
+<hr>
+<ul>
+<li><a href="https://askubuntu.com/questions/795438/log-file-eating-up-whole-space-in-ubuntu-16-04-lts-fix">Log file eating up whole space in Ubuntu 16.04 LTS. Fix?</a></li>
+<li><a href="https://sematext.com/blog/ubuntu-logs/">Ubuntu Logs: How to Check and Configure Log Files</a></li>
+<li><a href="https://serverfault.com/questions/403738/after-deleting-log-files-ubuntu-server-still-saying-there-is-no-space">After deleting log files, Ubuntu server still saying there is no space</a></li>
+<li><a href="https://stackoverflow.com/questions/35638219/ubuntu-large-syslog-and-kern-log-files">Ubuntu: large syslog and kern.log files [closed]</a></li>
+</ul></div>
 
 
 
@@ -1907,7 +1736,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../jenkins-guide/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Jenkins Guide">
+          <a href="../core/permission-model/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Permission Model">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1917,11 +1746,27 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Jenkins Guide
+                Permission Model
               </div>
             </div>
           </a>
         
+        
+          
+          <a href="../../docker/intro/" class="md-footer__link md-footer__link--next" aria-label="Next: Intro">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Intro
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
         
       </nav>
     
